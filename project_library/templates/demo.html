@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>数据提交：</h1>
+<form action="/query" method="post">
+    <p>添加书籍<input type="text" name="bookname"></p>
+    <p><input type="submit" name="submit"></p>
+</form>
+
+<hr>
+<h1>数据展示：</h1>
+<table border="1">
+        <tr>
+            <td>书名</td>
+
+        </tr>
+        {% for i in book_list %}
+            <tr>
+                <td> {{ i.name }} </td>
+            </tr>
+        {% endfor %}
+
+</table>
+</body>
+</html>
