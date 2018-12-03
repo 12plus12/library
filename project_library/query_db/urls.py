@@ -18,6 +18,6 @@ from django.contrib import admin
 from query_db import views
 
 urlpatterns = [
-    url(r'query', views.index),
-
+    url(r'^query/$', views.index),
+    url(r'^query/(\d+)/$', views.remove)
 ]
